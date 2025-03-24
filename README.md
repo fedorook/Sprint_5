@@ -78,4 +78,3 @@ No time.sleep() — smart WebDriverWait is used for synchronization.
 
 👨‍🚀 Author
 Sergei Fedoruk
-QA Engineer @ Yandex Practicum
