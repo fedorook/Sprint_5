@@ -2,9 +2,7 @@ from src.utils import login
 from src.locators import MainPageLocators, ProfilePageLocators, LoginPageLocators
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-EMAIL = "sergeifedoruk19999@ya.ru"
-PASSWORD = "password"
+from src.credentials import EMAIL, PASSWORD
 
 
 def test_logout_from_profile(driver):

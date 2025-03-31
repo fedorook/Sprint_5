@@ -1,9 +1,6 @@
 from src.locators import MainPageLocators, LoginPageLocators, RegistrationPageLocators, PasswordRecoveryPageLocators
 from src.utils import login, is_logged_in
-
-EMAIL = "sergeifedoruk19999@ya.ru"
-PASSWORD = "password"
-
+from src.credentials import EMAIL, PASSWORD
 
 def test_login_from_main_page(driver):
     driver.find_element(*MainPageLocators.LOGIN_FROM_MAIN_BUTTON).click()
