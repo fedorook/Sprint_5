@@ -22,6 +22,7 @@ class RegistrationPageLocators:
     EMAIL_INPUT = (By.XPATH, "//label[text()='Email']/following-sibling::input")
     PASSWORD_INPUT = (By.XPATH, "//label[text()='Пароль']/following-sibling::input")
     REGISTER_BUTTON = (By.XPATH, "//button[text()='Зарегистрироваться']")
+    INVALID_PASSWORD_ERROR = (By.XPATH, "//*[contains(text(), 'Некорректный пароль')]")
 
 class PasswordRecoveryPageLocators:
     GO_TO_LOGIN_LINK = (By.XPATH, "//a[text()='Войти']")

@@ -40,10 +40,8 @@ def test_registration_with_invalid_password(driver):
     driver.find_element(*RegistrationPageLocators.PASSWORD_INPUT).send_keys("12345")  # too short
     driver.find_element(*RegistrationPageLocators.REGISTER_BUTTON).click()
 
-    # Expect some error message (you may want to locate the actual error if known)
+    # Expect an error message
     error = WebDriverWait(driver, 5).until(
-        EC.visibility_of_element_located(
-            (By.XPATH, "//*[contains(text(), 'Некорректный пароль')]")
-        )
+        EC.visibility_of_element_located(*RegistrationPageLocators.INVALID_PASSWORD_ERROR)
     )
     assert error.is_displayed()
