@@ -4,11 +4,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from src.config import Config
 from src.locators import ConstructorSectionLocators
+from src.credentials import EMAIL, PASSWORD
 
 
 def test_go_to_profile_from_main(driver):
     driver.get(Config.LOGIN_URL)
-    login(driver, "sergeifedoruk19999@ya.ru", "password")
+    login(driver, EMAIL, PASSWORD)
 
     driver.find_element(*MainPageLocators.PERSONAL_ACCOUNT_BUTTON).click()
 
@@ -20,7 +21,7 @@ def test_go_to_profile_from_main(driver):
 
 def test_go_to_constructor_from_profile(driver):
     driver.get(Config.LOGIN_URL)
-    login(driver, "sergeifedoruk19999@ya.ru", "password")
+    login(driver, EMAIL, PASSWORD)
 
     # Go to profile first
     driver.find_element(*MainPageLocators.PERSONAL_ACCOUNT_BUTTON).click()
@@ -38,7 +39,7 @@ def test_go_to_constructor_from_profile(driver):
 
 def test_go_to_constructor_from_logo(driver):
     driver.get(Config.LOGIN_URL)
-    login(driver, "sergeifedoruk19999@ya.ru", "password")
+    login(driver, EMAIL, PASSWORD)
 
     # Go to profile first
     driver.find_element(*MainPageLocators.PERSONAL_ACCOUNT_BUTTON).click()
